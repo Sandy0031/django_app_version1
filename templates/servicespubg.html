@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block body %}
+
+<div class="container my-4">
+    <img src="/static/16.jfif" class="d-block w-100" width=100 height=600 alt="no image">
+
+
+</div>
+
+
+<div class="container-fluid my-4 px-4">
+    <h1 class="text-center">Services of PUBG</h1>
+    <form method="post" action="/add_data">
+        {% csrf_token %}
+      <div class="form-group mb-3 my-3">
+        <label for="name">Name</label>
+        <input type="name" class="form-control" name="name" id="name" placeholder="Enter your Name">  
+      </div>
+
+      <div class="form-group mb-3 my-3">
+        <label for="phone">Phone number</label>
+        <input type="phone" class="form-control" name="phone" id="phone" placeholder="Enter your phone number">  
+      </div>
+      
+      <div class="form-group mb-3">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email">
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="email">Please describe the issue briefly</label>
+        <textarea class="form-control" name="describe" id="describe" rows="3"></textarea>
+      </div>
+
+      <label for="customRange1" class="form-label">Please rate your experince from 1 to 10</label>
+      <input type="range" class="form-range" id="customRange1">
+      <input type = "submit" value ="Submit" />
+    </form>
+    </div>
+    
+{% endblock body %}
+
